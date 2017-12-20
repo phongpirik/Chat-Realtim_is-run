@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo chat</title>
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="https://phongdeptrai.herokuapp.com/socket.io/socket.io.js"></script>
+	<script src="xuli.js"></script>
+	<link rel="stylesheet" type="text/css" href="layout.css">
+
+</head>
+<body>
+<div id="wrapper">
+	
+	<div id="listUsers">
+		<h3>Messages</h3>
+		<div id="ds">
+			
+		</div>
+		<div id="scoll">
+		</div>
+	</div>
+	<div id="information">
+		<input class="block" type="text" id="txtHoTen" placeholder="Nhập Tên" name="">
+		<input class="block" type="text" id="txtEmail" placeholder="Nhập Tin Nhắn" autofocus name="">
+		<!-- <input type="text" id="txtSoDT" placeholder="Ho Ten" name=""> -->
+		<input type="button" id="btnRegister" value="Send" name="">
+	</div>
+</div>
+</body>
+</html>
