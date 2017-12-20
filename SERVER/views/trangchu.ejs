@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="socket.io/socket.io.js"></script>
+	<script>
+	//ket noi server
+		var socket = io("http://localhost:3333");
+		socket.on("Server-send-data",function(data){
+
+			$("#noidung").append(data+", ");
+		});
+		$(document).ready(function(){
+			$("#mrA").click(function(){
+				socket.emit("Client-send-data","Hello");
+			});
+		});
+	</script>
+
+</head>
+<body>
+	<div id="mrA"> Click sent </div>
+	<h2 id="noidung"></h2>
+</body>
+</html>
